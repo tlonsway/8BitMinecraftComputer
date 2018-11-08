@@ -1,0 +1,30 @@
+0000-NOP - no operation
+0001-LDA - load from DATA to RAM at address
+0010-ALU - compute at ALU(A,B) with given ALU function address
+0011-MVD - move RAM at address to display
+0100-JMP - jump to program address(address in DATA)
+0101-UNRESERVED
+0110-SHR - shift result right one in ALU and store in RAM address
+0111-SHL - shift result left one in ALU and store in RAM address
+1000-CLF - clear flag at flag address
+1001-MVA - move data from address to A in ALU
+1010-MVB - move data from address to B in ALU
+1011-MVR - move result of ALU to RAM at address
+1100-CLR - clear RAM at address
+1101-JMF - jump to program address if flag at address is true
+1110-IN - input data from PIP to RAM at address
+1111-HAL - stop the clock from moving(end the program)
+
+FLAG addresses:
+0001 - EF - Equals flag
+0010 - CF - Carry flag
+0011 - NF - Negative flag
+
+ALU function addresses:
+0001 - ADD
+0010 - SUB
+0011 - AND
+0100 - OR
+0101 - NOT
+0110 - XOR
+*XOR sets equals flag if data is equal
